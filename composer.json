@@ -1,0 +1,98 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "description": "Yii 2 Basic Project Template",
+    "keywords": ["yii2", "framework", "basic", "project template"],
+    "homepage": "http://www.yiiframework.com/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/vivekmarakana/yii2-dynamicform"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "2.0.14",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "webvimark/module-user-management": "^1.0",
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "digitv/kint": "1.x-dev",
+        "kartik-v/yii2-mpdf": "^1.0",
+        "kartik-v/yii2-widget-fileinput": "^1.0",
+        "kartik-v/yii2-money": "^1.0",
+        "kartik-v/yii2-date-range": "dev-master",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "kartik-v/yii2-widget-datepicker": "@dev",
+        "kartik-v/yii2-field-range": "*",
+        "rafaelrabaco/yii2-validator": "^1.0",
+        "kartik-v/yii2-widget-depdrop": "^1.0",
+        "nepstor/yii2-datetime-compare-validator": "^2.0",
+        "yiibr/yii2-correios": "@dev",
+        "aws/aws-sdk-php": "^3.36",
+        "frostealth/yii2-aws-s3": "~2.0",
+        "demogorgorn/yii2-ajax-submit-button": "@dev",
+        "miloschuman/yii2-highcharts-widget": "^6.0",        
+        "yiisoft/yii2-jui": "~2.0.0",
+        "kartik-v/yii2-detail-view": "*",
+        "yii2tech/ar-softdelete": "1.0.*",
+        "yii2tech/crontab": "1.0.*",
+        "2amigos/yii2-multi-select-widget" : "*",
+        "kartik-v/yii2-grid": "^3.1",
+        "light/yii2-xmlparser": "*",
+        "fpdf/fpdf": "^1.8",
+        "asinfotrack/yii2-audittrail": "^0.8.3",
+        "symfony/dom-crawler": "2.8",
+        "symfony/css-selector": "2.8",
+        "wbraganca/yii2-dynamicform": "*",
+        "kartik-v/yii2-widget-datetimepicker": "dev-master",
+        "kartik-v/yii2-number": "dev-master",
+        "geekcom/validator-docs": "^1.5",
+        "et-soft/yii2-widget-select-year": "*",
+        "mdmsoft/yii2-autonumber": "~1.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}

@@ -1,0 +1,9 @@
+adicionar campo 'data' = DATETIME/NULL
+adicionar campo 'situacao' = TINYINT(4)/NOT NULL
+alterar campo 'saldo' = pode ser NULL
+
+alterar campo 'email' = pode ser NULL
+
+Contato-cliente:
+alterar campo 'email' = pode ser NULL
+
